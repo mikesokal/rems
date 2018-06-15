@@ -64,7 +64,7 @@ bcdc_map <- function(id, epsg = 3005, query = NULL, sf, sort) {
                                  limit_param = "count",
                                  offset_param = "startIndex",
                                  limit = 100000,
-                                 limit_chunk = 10000)
+                                 limit_chunk = 1000)
 
   query_params <- list(service = "WFS",
                        version = "2.0.0",
@@ -100,7 +100,8 @@ ems_loc_object_name <- function()
   "WHSE_ENVIRONMENTAL_MONITORING.EMS_MONITORING_LOCN_TYPES_SVW"
 
 make_client <- function()
-  crul::HttpClient$new("https://openmaps.gov.bc.ca")
+  crul::HttpClient$new("https://openmaps.gov.bc.ca",
+                       progress = httr::progress("down"))
 
 parsed_response_to_sf <- function(x) {
   ret_list <- lapply(x, safe_st_read)
