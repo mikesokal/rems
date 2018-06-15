@@ -1,5 +1,5 @@
-Package: rems
 Type: Package
+Package: rems
 Title: Get Data From British Columbia's Environmental Monitoring System
 Version: 0.4.0.9999
 Authors@R: c(person("Andy", "Teucher", role = c("aut", "cre"),
@@ -7,21 +7,27 @@ Authors@R: c(person("Andy", "Teucher", role = c("aut", "cre"),
              person("Province of British Columbia", role = "cph"))
 Description: Download and parse data from B.C.'s Environmental Monitoring System.
 License: file LICENSE
+URL: https://github.com/bcgov/rems
+BugReports: https://github.com/bcgov/rems/issues
+Depends:
+    R (>= 2.10)
+Imports: 
+    crul (>= 0.5.2),
+    DBI (>= 0.5-1),
+    dbplyr (>= 1.1.0),
+    dplyr (>= 0.7.0),
+    httr (>= 1.2.1),
+    jsonlite (>= 1.5),
+    rappdirs (>= 0.3.1),
+    readr (>= 1.0.0),
+    RSQLite (>= 1.0.0),
+    storr (>= 1.0.1),
+    stringr (>= 1.1.0),
+    tibble (>= 1.2),
+    xml2 (>= 1.0.0)
+Suggests: 
+    sf (>= 0.6),
+    testthat
 Encoding: UTF-8
 LazyData: true
-Depends:
-  R (>= 3.3.0)
-Imports:
-  readr (>= 1.0.0),
-  httr (>= 1.2.1),
-  rappdirs (>= 0.3.1),
-  storr (>= 1.0.1),
-  tibble (>= 1.2),
-  dplyr (>= 0.7.0),
-  dbplyr (>= 1.1.0),
-  RSQLite (>= 1.0.0),
-  DBI (>= 0.5-1),
-  stringr (>= 1.1.0),
-  xml2 (>= 1.0.0)
 RoxygenNote: 6.0.1
-Suggests: testthat

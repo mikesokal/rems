@@ -4,7 +4,7 @@
 \alias{ems_locations}
 \title{Get EMS monitoring locations}
 \usage{
-ems_locations(epsg = 3005, query = "LOCATION_TYPE_CD='21'")
+ems_locations(epsg = 3005, query = "LOCATION_TYPE_CD='21'", sf = TRUE)
 }
 \arguments{
 \item{epsg}{The coordinate reference system}
@@ -12,9 +12,12 @@ ems_locations(epsg = 3005, query = "LOCATION_TYPE_CD='21'")
 \item{query}{Query string in ECQL syntax. Default is to only get monitoring
 location types of 'River Stream or Creek' (`LOCATION_TYPE_CD='21'`). See the
 [geoserver documentation](http://docs.geoserver.org/stable/en/user/filter/ecql_reference.html#filter-ecql-reference)}
+
+\item{sf}{should an `sf` spatial object be returned (default `TRUE`),
+or just a `data.frame`?}
 }
 \value{
-an `sf` object
+an `sf` object if `sf = TRUE`, otherwise a data.frame of the attributes
 }
 \description{
 Get an `sf` object of EMS monitoring locations

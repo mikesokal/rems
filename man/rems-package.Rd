@@ -8,6 +8,14 @@
 \description{
 Download and parse data from B.C.'s Environmental Monitoring System.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/bcgov/rems}
+  \item Report bugs at \url{https://github.com/bcgov/rems/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Andy Teucher \email{andy.teucher@gov.bc.ca}
 
