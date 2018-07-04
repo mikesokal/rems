@@ -114,7 +114,7 @@ parsed_response_to_sf <- function(x) {
 }
 
 safe_st_read <- function(x, ...) {
-  if (!requireNamespace("sf", queitly = TRUE)) {
+  if (!requireNamespace("sf", quietly = TRUE)) {
     stop("sf package required to return an sf object")
   }
   tryCatch(sf::st_read(x, stringsAsFactors = FALSE, quiet = TRUE, ...),
