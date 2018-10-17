@@ -4,7 +4,8 @@
 \alias{ems_locations}
 \title{Get EMS monitoring locations}
 \usage{
-ems_locations(epsg = 3005, query = "LOCATION_TYPE_CD='21'", sf = TRUE)
+ems_locations(epsg = 3005, query = "LOCATION_TYPE_CD='21'",
+  sf = TRUE)
 }
 \arguments{
 \item{epsg}{The coordinate reference system}
